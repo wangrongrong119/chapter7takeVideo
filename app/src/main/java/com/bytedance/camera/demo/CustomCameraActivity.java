@@ -90,7 +90,6 @@ public class CustomCameraActivity extends AppCompatActivity implements SurfaceHo
                 isRecording = false;
             } else {
                 //todo 录制
-//                mCamera = getCamera(CAMERA_TYPE);
                 isRecording = true;
                 mMediaRecorder =new MediaRecorder();
                 mCamera.unlock();
@@ -122,18 +121,6 @@ public class CustomCameraActivity extends AppCompatActivity implements SurfaceHo
 
         findViewById(R.id.btn_facing).setOnClickListener(v -> {
             //todo 切换前后摄像头
-//         int count=   Camera.getNumberOfCameras();
-//        int i= Camera.CameraInfo.CAMERA_FACING_FRONT;
-//            int i1  ;
-//            int i2;
-//         if(count>1){
-//             releaseCameraAndPreview();
-//             Camera cam=Camera.open(Camera.CameraInfo.CAMERA_FACING_FRONT);
-//             rotationDegree=getCameraDisplayOrientation(position);
-//             cam.setDisplayOrientation(rotationDegree);
-//
-//
-//         }
             if (CAMERA_TYPE== Camera.CameraInfo.CAMERA_FACING_BACK){
                 releaseCameraAndPreview();
                 CAMERA_TYPE=Camera.CameraInfo.CAMERA_FACING_FRONT;
